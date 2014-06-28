@@ -75,7 +75,8 @@ class HookTest extends \PHPUnit_Framework_TestCase {
 	public function testHooksContainer() {
 		$hooks = new HooksManager();
 
-		\Asgard\Container\Container::instance()['cache'] = new \Asgard\Cache\NullCache();
+		\Asgard\Container\Container::singleton()['cache'] = new \Asgard\Cache\NullCache();
+		\Asgard\Container\Container::singleton()['config'] = ['debug'=>0];
 
 		$fhooks = \Asgard\Hook\Tests\Fixtures\Hooks::fetchHooks();
 
@@ -91,4 +92,6 @@ class HookTest extends \PHPUnit_Framework_TestCase {
 	}
 }
 
-class Foo extends \Asgard\Hook\Hookable {}
+class Foo {
+	use \Asgard\Hook\Hookable;
+}
