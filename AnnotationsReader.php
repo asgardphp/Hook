@@ -49,11 +49,19 @@ class AnnotationsReader {
 		return $hooks;
 	}
 
+	/**
+	 * Set the cache dependency.
+	 * @param \Asgard\Cache\Cache $cache
+	 */
 	public function setCache($cache) {
 		$this->cache = $cache;
 		return $this;
 	}
 
+	/**
+	 * Set the debug parameter.
+	 * @param boolean $debug true to debug, false otherwise
+	 */
 	public function setDebug($debug) {
 		$this->debug = $debug;
 		return $this;
