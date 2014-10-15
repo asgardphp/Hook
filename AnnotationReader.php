@@ -8,7 +8,7 @@ require_once __DIR__.'/Annotations/Hook.php';
  * Annotations reader.
  * @author Michel Hognerud <michel@hognerud.net>
 */
-class AnnotationsReader {
+class AnnotationReader {
 	/**
 	 * Cache instance.
 	 * @var \Doctrine\Common\Cache\Cache
@@ -22,7 +22,7 @@ class AnnotationsReader {
 
 	/**
 	 * Return the hooks of a container.
-	 * @param string $class HooksContainer class.
+	 * @param string $class HookContainer class.
 	 * @return array
 	*/
 	public function fetchHooks($class) {
