@@ -1,5 +1,5 @@
 <?php
-namespace Asgard\Hook\Annotations;
+namespace Asgard\Hook\Annotation;
 
 /**
  * @Annotation
